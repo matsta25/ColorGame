@@ -21,6 +21,7 @@ function setupSquares(){
     for(var i = 0; i < squares.length; i++){
         squares[i].addEventListener("click",function(){
             var clickedColor = this.style.backgroundColor;
+<<<<<<< HEAD
 	            if( clickedColor === pickedColor ){
 	                messageDisplay.textContent = "CORRECT!";
 	                resetButton.textContent = "TRY AGAIN?";
@@ -30,6 +31,17 @@ function setupSquares(){
 	                this.style.backgroundColor = "#232323";
 	                messageDisplay.textContent = "TRY AGAIN";
 	            }
+=======
+            if( clickedColor === pickedColor ){
+                messageDisplay.textContent = "CORRECT!";
+                resetButton.textContent = "TRY AGAIN?";
+                changeColors(clickedColor);
+                h1.style.backgroundColor = clickedColor;
+            }else{
+                this.style.backgroundColor = "#232323";
+                messageDisplay.textContent = "TRY AGAIN";
+            }
+>>>>>>> 9461959b9911477ff3e66911c78d8229521bbd0e
         });
     }
 }
