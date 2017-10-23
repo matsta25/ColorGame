@@ -21,15 +21,15 @@ function setupSquares(){
     for(var i = 0; i < squares.length; i++){
         squares[i].addEventListener("click",function(){
             var clickedColor = this.style.backgroundColor;
-            if( clickedColor === pickedColor ){
-                messageDisplay.textContent = "CORRECT!";
-                resetButton.textContent = "TRY AGAIN?";
-                changeColors(clickedColor);
-                h1.style.backgroundColor = clickedColor;
-            }else{
-                this.style.backgroundColor = "#232323";
-                messageDisplay.textContent = "TRY AGAIN";
-            }
+	            if( clickedColor === pickedColor ){
+	                messageDisplay.textContent = "CORRECT!";
+	                resetButton.textContent = "TRY AGAIN?";
+	                changeColors(clickedColor);
+	                h1.style.backgroundColor = clickedColor;
+	            }else{
+	                this.style.backgroundColor = "#232323";
+	                messageDisplay.textContent = "TRY AGAIN";
+	            }
         });
     }
 }
